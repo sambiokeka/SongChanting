@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Responsividade para mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SongChanting - Header Responsivo</title>
+
+    <!-- Estilo customizado -->
+    <link rel="stylesheet" href="../css/header.css">
+
+    <!-- TailwindCSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-800 min-h-screen">
+
+    <!-- Header fixo no topo -->
+    <header class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50">
+        
+        <!-- Container do header (alinhamento flex + espaçamento responsivo) -->
+        <div class="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
+          
+            <!-- Logo + botão do menu mobile -->
+            <div class="flex items-center">
+                
+                <!-- Botão menu (hamburguer) - só aparece em telas pequenas (md:hidden) -->
+                <button id="mobile-menu-button" class="md:hidden mr-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+                    <!-- Ícone hamburguer (3 linhas) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                
+                <!-- Logo + nome -->
+                <a href="#" class="flex items-center gap-3">
+                    <!-- Caixinha colorida com "barras de música animadas" -->
+                    <div class="w-9 h-7 bg-gradient-to-r from-purple-500 to-pink-500 rounded flex items-center justify-center">
+                        <div class="music-bars scale-75">
+                            <div class="music-bar bg-white"></div>
+                            <div class="music-bar bg-white"></div>
+                            <div class="music-bar bg-white"></div>
+                            <div class="music-bar bg-white"></div>
+                        </div>
+                    </div>
+                    <!-- Texto logo -->
+                    <span class="text-xl font-bold text-white">
+                        Song<span class="bg-gradient-to-r from-purple-300 to-pink-400 bg-clip-text text-transparent">Chanting</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Menu navegação (visível só em desktop: hidden md:flex) -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#" class="text-sm font-medium text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition">Descobrir</a>
+                <a href="#" class="text-sm font-medium text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition">Biblioteca</a>
+                <a href="#" class="text-sm font-medium text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition">Playlists</a>
+            </nav>
+
+            <!-- Botões ação (visíveis apenas no desktop: hidden md:flex) -->
+            <div class="hidden md:flex gap-4">
+                <a class="block px-5 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition" href="#">
+                    Login
+                </a>
+                <a class="block rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-5 py-2 text-sm font-medium text-white hover:opacity-90 transition" href="#">
+                    Assinar
+                </a>
+            </div>
+
+            <!-- Botões ação mobile (apenas ícone, md:hidden) -->
+            <div class="flex md:hidden gap-4">
+                <a href="#" class="p-2 text-gray-700 dark:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <!-- Ícone de perfil -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- MENU MOBILE (sidebar deslizante) -->
+        <div id="mobile-menu" class="fixed inset-0 z-40 md:hidden transition-transform duration-300 ease-in-out menu-closed">
+
+        <!-- Fundo escuro transparente ao abrir menu -->
+        <div class="fixed inset-0 bg-black bg-opacity-25" aria-hidden="true" id="mobile-menu-backdrop"></div>
+
+        <!-- Caixa do menu lateral -->
+        <div class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white dark:bg-gray-900 shadow-lg overflow-y-auto">
+            <!-- Header do menu (com botão fechar) -->
+            <div class="flex items-center justify-between h-16 px-4 border-b border-gray-200 dark:border-gray-800">
+                <span class="text-xl bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    Mais que ouvir, sentir
+                </span>
+                <!-- Botão fechar menu -->
+                <button id="close-menu-button" class="p-2 rounded-md text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
+                    <!-- Ícone X -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Links de navegação no menu mobile -->
+            <nav class="px-4 py-6 space-y-4 -mt-2">
+                <a href="#" class="block py-2 text-base font-medium text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition">Descobrir</a>
+                <a href="#" class="block py-2 text-base font-medium text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition">Biblioteca</a>
+                <a href="#" class="block py-2 text-base font-medium text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition">Playlists</a>
+                
+                <!-- Botões de login/assinar dentro do menu -->
+                <div class="pt-6 border-t border-gray-200 dark:border-gray-800 space-y-4">
+                    <a href="#" class="block w-full rounded-lg bg-gray-100 dark:bg-gray-800 px-4 py-3 text-center text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition">Login</a>
+                    <a href="#" class="block w-full rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-3 text-center text-sm font-medium text-white hover:opacity-90 transition">Assinar</a>
+                </div>
+            </nav>
+            <div class="pt-6 border-t border-gray-200 dark:border-gray-800 space-y-4">
+                <!-- Encheção de linguiça só pra aumentar altura -->
+                <div class="text-sm px-3 py-6 space-y-3 text-gray-500 dark:text-gray-400 -mt-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus.</p>
+                    <p>Fusce nec tellus sed augue semper porta.</p>
+                    <p>Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                    <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.</p>
+                    <p>Donec sodales sagittis magna. Sed consequat, leo eget.</p>
+                    <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                    <p>Phasellus viverra nulla ut metus varius laoreet.</p>
+                    <p>Praesent blandit laoreet nibh. Fusce convallis metus id felis luctus.</p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+      <!-- Script para abrir/fechar menu mobile -->
+      <script src="../js/header.js"></script>
+</body>
+</html>
