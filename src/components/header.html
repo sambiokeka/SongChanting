@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- Responsividade para mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SongChanting - Header Responsivo</title>
+    <title>SongChanting</title>
 
     <!-- Estilo customizado -->
     <link rel="stylesheet" href="../css/header.css">
@@ -13,14 +13,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 dark:bg-gray-800 min-h-screen">
+<body class="">
 
     <!-- Header fixo no topo -->
     <header class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50">
         
         <!-- Container do header (alinhamento flex + espaçamento responsivo) -->
-        <div class="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          
+        <div class="flex h-16 items-center justify-between px-4 md:px-6 w-full">
+
             <!-- Logo + botão do menu mobile -->
             <div class="flex items-center">
                 
@@ -51,7 +51,7 @@
             </div>
 
             <!-- Menu navegação (visível só em desktop: hidden md:flex) -->
-            <nav class="hidden md:flex items-center space-x-6">
+            <nav class="hidden md:flex items-center space-x-12">
                 <a href="#" class="text-sm font-medium text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition">Descobrir</a>
                 <a href="#" class="text-sm font-medium text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition">Biblioteca</a>
                 <a href="#" class="text-sm font-medium text-gray-700 hover:text-purple-600 dark:text-gray-300 dark:hover:text-purple-400 transition">Playlists</a>
@@ -59,12 +59,8 @@
 
             <!-- Botões ação (visíveis apenas no desktop: hidden md:flex) -->
             <div class="hidden md:flex gap-4">
-                <a class="block px-5 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition" href="#">
-                    Login
-                </a>
-                <a class="block rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-5 py-2 text-sm font-medium text-white hover:opacity-90 transition" href="#">
-                    Assinar
-                </a>
+                <a class="block px-5 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition" href="#">Você</a>
+                <a class="block rounded-full bg-gradient-to-r from-purple-500 to-pink-500 px-5 py-2 text-sm font-medium text-white hover:opacity-90 transition" href="#">Assinar</a>
             </div>
 
             <!-- Botões ação mobile (apenas ícone, md:hidden) -->

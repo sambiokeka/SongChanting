@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.music-bars {
+    display: flex;
+    align-items: end;
+    height: 16px;
+    gap: 2px;
+}
+
+.music-bar {
+    width: 2px;
+    background-color: white;
+    animation: musicBarAnimation 1s ease infinite alternate;
+}
+
+.music-bar:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.music-bar:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.music-bar:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+@keyframes musicBarAnimation {
+    from { height: 4px; }
+    to { height: 16px; }
+}
+
+.lyrics-container {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.lyric-line {
+    transition: all 0.2s ease;
+}
+
+.lyric-line.active {
+    color: #ec4899;
+    font-weight: 600;
+    transform: scale(1.05);
+}
+
+.sidebar {
+    width: 320px;
+    height: 100vh;
+    border-right: 1px solid #e5e7eb;
+    overflow-y: auto;
+}
+
+.play-controls-mobile {
+    display: none;
+}
+
+
+.paused .music-bar {
+    animation-play-state: paused;
+}
+
+.paused .music-bars span {
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+        padding-bottom: 80px; 
+    }
+    
+    .desktop-controls {
+        display: none;
+    }
+    
+    .play-controls-mobile {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top: 1px solid #e5e7eb;
+        padding: 12px 16px;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    .now-playing-mobile {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .now-playing-info {
+        margin-left: 12px;
+        min-width: 0;
+        overflow: hidden;
+    }
+    
+    .now-playing-info h4 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    
+    .now-playing-info p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+        color: #6b7280;
+    }
+    
+    .mobile-control-buttons {
+        display: flex;
+        align-items: center;
+    }
+    
+    .lyrics-container {
+        max-height: 40vh;
+    }
+}
+
+@media (min-width: 769px) {
+    .play-controls-mobile {
+        display: none;
+    }
+    
+    .desktop-controls {
+        display: block;
+    }
+}

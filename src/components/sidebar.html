@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SongChanting - Sidebar Responsiva</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+
+<body class="min-h-screen flex">
+    <aside class="sidebar bg-white dark:bg-gray-900 p-4">
+        <!-- Barra de pesquisa -->
+        <div class="relative mb-6">
+            <input type="text" placeholder="Pesquisar música..." class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-800 dark:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-3 top-2.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+        </div>
+        
+        <!-- Música que está tocando -->
+        <div class="mb-6 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <h3 class="font-semibold text-gray-800 dark:text-white mb-3">Tocando agora</h3>
+            <div class="flex items-center">
+                <img src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2Feaf31001319b08a8b3fd9d381c1fe76e.999x999x1.png" alt="Capa do álbum" class="w-16 h-16 rounded-lg shadow-md">
+                <div class="ml-4">
+                    <h4 class="font-semibold text-gray-800 dark:text-white">Star Shopping</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Lil Peep</p>
+                    <div class="flex items-center mt-1">
+                        <div class="music-bars">
+                            <div class="music-bar bg-purple-500"></div>
+                            <div class="music-bar bg-purple-500"></div>
+                            <div class="music-bar bg-purple-500"></div>
+                            <div class="music-bar bg-purple-500"></div>
+                        </div>
+                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-2">Tocando...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Letra da música -->
+        <div class="mb-6">
+            <h3 class="font-semibold text-gray-800 dark:text-white mb-3">Letra</h3>
+            <div class="lyrics-container h-64 overflow-y-auto py-2 bg-gray-50 dark:bg-gray-800 rounded-lg px-4">
+                <div class="text-center text-gray-600 dark:text-gray-400 space-y-3 mt-4">
+                    <p class="lyric-line active">Wait right here</p>
+                    <p class="lyric-line">I'll be back in the mornin'</p>
+                    <p class="lyric-line">I know that I'm not that important to you</p>
+                    <p class="lyric-line">But to me, girl, you're so much more than gorgeous (Yeah)</p>
+                    <p class="lyric-line">So much more than perfect (Yeah)</p>
+                    <p class="lyric-line">Right now I know that I'm not really worth it</p>
+                    <p class="lyric-line">If you give me time, I could work on it</p>
+                    <p class="lyric-line">Give me some time while I work on it</p>
+                    <p class="lyric-line">Losin' your patience, and, girl, I don't blame you</p>
+                    <p class="lyric-line">The Earth's in rotation, you'rе waitin' for me (GothBoiClique)</p>
+                    <p class="lyric-line">Look at my face whеn I f*** on your waist</p>
+                    <p class="lyric-line">'Cause we only have one conversation a week</p>
+                    <p class="lyric-line">That's why your friends always hatin' on me</p>
+                    <p class="lyric-line">F*** 'em though, I did this all by myself</p>
+                    <p class="lyric-line">Matter fact, I ain't never asked no one for help</p>
+                    <p class="lyric-line">And that's why I don't pick up my phone when it rings</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Controles (desktop) -->
+        <div class="mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 desktop-controls">
+            <div class="flex items-center justify-between mb-3">
+                <!-- Botão voltar -->
+                <button class="p-2 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                </button>
+                <!-- Botão Play/Pause -->
+                <button id="play-pause-btn-desktop" class="p-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:opacity-90 transition">
+                    <svg id="play-icon-desktop" xmlns="http://www.w3.org/2000/svg" fill="none" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    </svg>
+                    <svg id="pause-icon-desktop" xmlns="http://www.w3.org/2000/svg" fill="none" class="h-6 w-6 hidden" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6" />
+                    </svg>
+                </button>
+                <!-- Botão avançar -->
+                <button class="p-2 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-5 h-5" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Barra de progresso -->
+            <div class="mt-2">
+                <div class="relative pt-1">
+                    <div class="overflow-hidden h-1 text-xs flex rounded bg-gray-200 dark:bg-gray-700">
+                        <div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500 w-[47%]"></div>
+                    </div>
+                </div>
+                <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    <span>1:08</span>
+                    <span>2:23</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Playlists -->
+        <div class="mt-8">
+            <h3 class="font-semibold text-gray-800 dark:text-white mb-3">Suas playlists</h3>
+            <div class="space-y-2">
+                <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
+                    <div class="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded flex items-center justify-center mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-4 w-4  text-white" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                        </svg>
+                    </div>
+                    <span class="text-sm text-gray-700 dark:text-gray-300">Undeground</span>
+                </div>
+                
+                <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
+                    <div class="w-8 h-8 bg-gradient-to-r from-blue-400 to-teal-400 rounded flex items-center justify-center mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-4 h-4  text-white" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                        </svg>
+                    </div>
+                    <span class="text-sm text-gray-700 dark:text-gray-300">Sdds dela...</span>
+                </div>
+                
+                <div class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer">
+                    <div class="w-8 h-8 bg-gradient-to-r from-amber-400 to-orange-400 rounded flex items-center justify-center mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                        </svg>
+                    </div>
+                    <span class="text-sm text-gray-700 dark:text-gray-300">Acadêmia</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Controles (mobile) -->
+    <div class="play-controls-mobile dark:bg-gray-900 dark:border-gray-800">
+        <div class="now-playing-mobile">
+            <img src="https://t2.genius.com/unsafe/300x300/https%3A%2F%2Fimages.genius.com%2Feaf31001319b08a8b3fd9d381c1fe76e.999x999x1.png" alt="Capa do álbum" class="w-12 h-12 rounded">
+            <div class="now-playing-info">
+                <h4 class="dark:text-white">Star Shopping</h4>
+                <p class="dark:text-gray-400">Lil Peep</p>
+            </div>
+        </div>
+        <div class="mobile-control-buttons">
+            <!-- Botão voltar -->
+            <button class="p-2 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                </svg>
+            </button>
+            <!-- Botão Play/Pause -->
+            <button id="play-pause-btn-mobile" class="p-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:opacity-90 transition mx-2">
+                <svg id="play-icon-mobile" xmlns="http://www.w3.org/2000/svg" fill="none" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor">
+                    <!-- Ícone de play -->
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                </svg>
+                <svg id="pause-icon-mobile" xmlns="http://www.w3.org/2000/svg" fill="none" class="h-6 w-6 hidden" viewBox="0 0 24 24" stroke="currentColor">
+                    <!-- Ícone de pause -->
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6M14 9v6" />
+                </svg>
+            </button>
+            <!-- Botão avançar -->
+            <button class="p-2 text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="h-5 w-5" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="../js/sidebar.js"></script>
+</body>
+</html>
