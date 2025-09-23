@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="src/css/footer.css">
   <link rel="stylesheet" href="src/css/header.css">
+  <link rel="stylesheet" href="src/css/index.css">
   <link rel="stylesheet" href="src/css/sidebar.css">
   <title>SongChanting - Mais que ouvir, sentir</title>
 
@@ -20,17 +21,12 @@
     
     <!-- Conteúdo Principal -->
     <main class="flex-1 p-6 lg:p-8">
-            <button id="theme-toggle" class="p-2 text-gray-500 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-200">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9.023-9.023h-1M4.977 12.023h-1M18.364 5.636l-.707.707M5.636 18.364l-.707.707M18.364 18.364l-.707-.707M5.636 5.636l-.707-.707M12 7a5 5 0 100 10 5 5 0 000-10z"></path>
-        </svg>
-    </button>
       <!-- Hero Section -->
       <section class="mb-12">
         <div class="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
           <h1 class="text-4xl lg:text-5xl font-bold mb-4">Mais que ouvir, <span class="bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">sentir</span></h1>
           <p class="text-lg lg:text-xl mb-6 opacity-90">Descubra músicas que falam com sua alma. Letras que tocam o coração.</p>
-          <button class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+          <button class="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold  hover:scale-105 transition-transform duration-300 cursor-pointer ">
             Começar a Explorar
           </button>
         </div>
@@ -46,7 +42,8 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Música 1 -->
-          <div class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg hover:shadow-xl transition">
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+
             <div class="flex items-center space-x-4">
               <img src="https://images.genius.com/eaf31001319b08a8b3fd9d381c1fe76e.999x999x1.png" 
                    alt="Star Shopping" class="w-16 h-16 rounded-lg">
@@ -66,15 +63,15 @@
           </div>
 
           <!-- Música 2 -->
-          <div class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg hover:shadow-xl transition">
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
             <div class="flex items-center space-x-4">
               <img src="https://imgs.search.brave.com/_ntoKaP7F-0Brjuild2r4cWYcyliuyrk3tdVYKY9FS0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/cXVhbC1hLW9waW5p/JUMzJUEzby1kZS12/b2MlQzMlQUFzLXNv/YnJlLW8tJUMzJUJB/bHRpbW8tJUMzJUEx/bGJ1bS1kby1saW5r/LWRvLXphcC12MC02/eWVmZWU3eThjN2Yx/LmpwZWc_YXV0bz13/ZWJwJnM9ZmY5NWNl/M2ZiMmEzNmI2Yjg2/ZDM5YjhlMWQ0OTk3/M2NmM2EwOTIxMA" 
                    alt="Come Over" class="w-16 h-16 rounded-lg">
               <div class="flex-1">
-                <h3 class="font-semibold text-gray-800 dark:text-white">Come Over</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Dom Vallie</p>
+                <h3 class="font-semibold text-gray-800 dark:text-white">rei dos demônios</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Link do Zap</p>
                 <div class="flex items-center mt-1">
-                  <span class="text-xs text-gray-500">3:24</span>
+                  <span class="text-xs text-gray-500">4:10</span>
                 </div>
               </div>
               <button class="p-2 bg-gray-100 dark:bg-gray-700 rounded-full">
@@ -86,9 +83,9 @@
           </div>
 
           <!-- Música 3 -->
-          <div class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg hover:shadow-xl transition">
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer">
             <div class="flex items-center space-x-4">
-              <img src="https://i.scdn.co/image/ab67616d0000b273c1a69f5b9e28bf180aba6c47" 
+              <img src="https://imgs.search.brave.com/NGn3tRgDJXBsaAa8PRJvx1z8gKGKeIcBCmfkm_McLSg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9leHRl/cm5hbC1wcmV2aWV3/LnJlZGQuaXQvdGhl/LW51bWJlci1vbmVz/LXh4eHRlbnRhY2lv/bnMtc2FkLXYwLXMt/QVZvdTl4dF9zZHUy/bjZzWWVkZENMQ01E/anlvWkZqZXFfWjRU/Qld6T0kuanBnP3dp/ZHRoPTY0MCZjcm9w/PXNtYXJ0JmF1dG89/d2VicCZzPTU4MjNh/NmFlY2E0NTBlZTc3/M2VlYjJjNzI2MDc4/ZjBhZGVhNTdjMjc" 
                    alt="SAD!" class="w-16 h-16 rounded-lg">
               <div class="flex-1">
                 <h3 class="font-semibold text-gray-800 dark:text-white">SAD!</h3>
@@ -113,7 +110,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Playlist 1 -->
-          <div class="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 text-white">
+          <div class="bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl p-6 text-white transform hover:scale-105 transition-transform duration-300 cursor-pointer">
             <div class="mb-4">
               <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -126,7 +123,7 @@
           </div>
 
           <!-- Playlist 2 -->
-          <div class="bg-gradient-to-br from-blue-500 to-teal-400 rounded-xl p-6 text-white">
+          <div class="bg-gradient-to-br from-blue-500 to-teal-400 rounded-xl p-6 text-white hover:scale-105 transition-transform duration-300 cursor-pointer">
             <div class="mb-4">
               <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -139,7 +136,7 @@
           </div>
 
           <!-- Playlist 3 -->
-          <div class="bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl p-6 text-white">
+          <div class="bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl p-6 text-white hover:scale-105 transition-transform duration-300 cursor-pointer">
             <div class="mb-4">
               <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -152,7 +149,7 @@
           </div>
 
           <!-- Playlist 4 -->
-          <div class="bg-gradient-to-br from-green-500 to-emerald-400 rounded-xl p-6 text-white">
+          <div class="bg-gradient-to-br from-green-500 to-emerald-400 rounded-xl p-6 text-white hover:scale-105 transition-transform duration-300 cursor-pointer">
             <div class="mb-4">
               <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -166,126 +163,126 @@
         </div>
       </section>
 
-      <!-- Estatísticas -->
-      <section class="bg-white dark:bg-gray-800 rounded-2xl p-8">
-        <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center">Sua Jornada Musical</h2>
+      <!-- Artistas -->
+      <section class="mt-12 mb-12">
+          <div class="flex justify-between items-center mb-6">
+              <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white">Artistas</h2>
+              <a href="#" class="text-purple-600 hover:text-purple-700 font-medium">Ver todos</a>
+          </div>
         
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-          <div>
-            <div class="text-3xl lg:text-4xl font-bold text-purple-600 mb-2">127</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">Músicas Ouvidas</div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center">
+            
+                <div class="flex flex-col items-center text-center">
+                  <img src="https://imgs.search.brave.com/tvgFZ7jRiKYhEYhXnlW69Fy1rTSd-Y52aoI2jKnW_5o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2E4LzE0/LzRjL2E4MTQ0Yzkw/YjY1Y2FmZTA5NzU1/NjhiMmM5ZjlmMzUx/LmpwZw" alt="Artista 2" class="w-32 h-32 rounded-full mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white mb-1 cursor-pointer">Juyce WRLD</h3>
+                  <p class="text-xs text-gray-600 dark:text-gray-400">13.5M seguidores</p>
+                  <button class="mt-2 text-sm border border-purple-600 px-4 py-1 rounded-full bg-purple-600 text-white transition-colors duration-200">
+                      Seguindo
+                  </button>
+              </div> 
+
+              <div class="flex flex-col items-center text-center">
+                  <img src="https://res.cloudinary.com/shotgun/image/upload/c_limit,w_750/fl_lossy/f_auto/q_auto/production/artworks/artists/lil_peep.jpg" alt="Artista 1" class="w-32 h-32 rounded-full mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white mb-1 cursor-pointer">Lil Peep</h3>
+                  <p class="text-xs text-gray-600 dark:text-gray-400">9.8M seguidores</p>
+                  <button class="mt-2 text-sm border border-purple-600 px-4 py-1 rounded-full bg-purple-600 text-white transition-colors duration-200">
+                      Seguindo
+                  </button>
+              </div>
+              
+              <div class="flex flex-col items-center text-center">
+                  <img src="https://images.genius.com/1d5208e6c9cfd4447c739a850049e1b1.900x900x1.png" alt="Artista 3" class="w-32 h-32 rounded-full mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white mb-1 cursor-pointer">Link do Zap</h3>
+                  <p class="text-xs text-gray-600 dark:text-gray-400">127K seguidores</p>
+                  <button class="mt-2 text-sm border border-purple-600 px-4 py-1 rounded-full bg-purple-600 text-white transition-colors duration-200">
+                      Seguindo
+                  </button>
+              </div>
+              
+              <div class="flex flex-col items-center text-center">
+                  <img src="https://images.genius.com/492d91282b43e9fabdac81acabe251c7.999x999x1.jpg" alt="Artista 4" class="w-32 h-32 rounded-full mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white mb-1 cursor-pointer">Alex G</h3>
+                  <p class="text-xs text-gray-600 dark:text-gray-400">406K seguidores</p>
+                  <button class="mt-2 text-sm text-purple-600 border border-purple-600 px-4 py-1 rounded-full hover:bg-purple-600 hover:text-white transition-colors duration-200">
+                      Seguir
+                  </button>
+              </div>
+
+              <div class="hidden sm:flex flex-col items-center text-center ultimos-mobile">
+                  <img src="https://imgs.search.brave.com/y1SVu85f_4FrRUtHunzXwqZo8aNfXkZi3CSwqEMaA80/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dmFnYWx1bWUuY29t/LmJyL2NoYXJkLWxh/LXBsYWdhL2ltYWdl/cy9jaGFyZC1sYS1w/bGFnYS53ZWJw" alt="Artista 4" class="w-32 h-32 rounded-full mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white mb-1 cursor-pointer">Chard La Plaga</h3>
+                  <p class="text-xs text-gray-600 dark:text-gray-400">32.6K seguidores</p>
+                  <button class="mt-2 text-sm text-purple-600 border border-purple-600 px-4 py-1 rounded-full hover:bg-purple-600 hover:text-white transition-colors duration-200">
+                      Seguir
+                  </button>
+              </div>
+
+              <div class="hidden sm:flex flex-col items-center text-center ultimos-mobile">
+                  <img src="https://yt3.googleusercontent.com/dAnBgs-PehjOVgMuWg_3JiJ9L69z9TisD-1vIBpqA3HTZkqxEdIOZdivE7__jEkqFTHDKuP-bw=s160-c-k-c0x00ffffff-no-rj" alt="Artista 4" class="w-32 h-32 rounded-full mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white mb-1 cursor-pointer">Ztokyo</h3>
+                  <p class="text-xs text-gray-600 dark:text-gray-400">9.2K seguidores</p>
+                  <button class="mt-2 text-sm text-purple-600 border border-purple-600 px-4 py-1 rounded-full hover:bg-purple-600 hover:text-white transition-colors duration-200">
+                      Seguir
+                  </button>
+              </div>
           </div>
-          <div>
-            <div class="text-3xl lg:text-4xl font-bold text-pink-600 mb-2">42</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">Artistas Descobertos</div>
+      </section>
+      <!-- Álbuns -->
+      <section class="albuns mt-12">
+          <div class="flex justify-between items-center mb-10">
+              <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white">Álbuns Recomendados</h2>
+              <a href="#" class="text-purple-600 hover:text-purple-700 font-medium">Ver todos</a>
           </div>
-          <div>
-            <div class="text-3xl lg:text-4xl font-bold text-blue-600 mb-2">18h</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">Tempo de Escuta</div>
+          
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-items-stretch">
+              <div class="flex flex-col items-start text-left">
+                  <img src="https://m.media-amazon.com/images/I/71gV1pe4GwL._UF1000,1000_QL80_.jpg" alt="HELLBOY" class="w-full rounded-lg mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white truncate w-full cursor-pointer">HELLBOY</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 truncate w-full">Lil Peep</p>
+              </div>
+              
+              <div class="flex flex-col items-start text-left">
+                  <img src="https://i.scdn.co/image/ab67616d0000b273255d9ec173d482187f25762c" alt="Kalledy" class="w-full rounded-lg mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white truncate w-full cursor-pointer">Kalledy</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 truncate w-full">Link do Zap</p>
+              </div>
+
+              <div class="flex flex-col items-start text-left">
+                  <img src="https://upload.wikimedia.org/wikipedia/pt/2/20/Damn.-Kendrick_Lamar.jpg" alt="DAMN." class="w-full rounded-lg mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white truncate w-full cursor-pointer">DAMN.</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 truncate w-full">Kendrick Lamar</p>
+              </div>
+              
+              <div class="flex flex-col items-start text-left">
+                  <img src="https://m.media-amazon.com/images/I/61pyhJB0ZdL._UF1000,1000_QL80_.jpg" alt="Goodbye & Good Riddance" class="w-full rounded-lg mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white truncate w-full cursor-pointer">Goodbye & Good Riddance</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 truncate w-full">Juice WRLD</p>
+              </div>
+              
+              <div class="hidden sm:flex flex-col items-start text-left">
+                  <img src="https://cdn-images.dzcdn.net/images/cover/402390463bc1112c3d488152a46061fc/500x500.jpg" alt="17" class="w-full rounded-lg mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white truncate w-full cursor-pointer">Petals to Thorns</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 truncate w-full">d4vd</p>
+              </div>
+              
+              <div class="hidden sm:flex flex-col items-start text-left">
+                  <img src="https://images.genius.com/ffeed09b8a039997db9f14f7ce7b6733.1000x1000x1.png" alt="To Pimp a Butterfly" class="w-full rounded-lg mb-3 shadow-lg hover:shadow-xl transition-all cursor-pointer">
+                  <h3 class="font-semibold text-gray-800 dark:text-white truncate w-full cursor-pointer">Feliz no Simples</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 truncate w-full">MC IG</p>
+              </div>
           </div>
-          <div>
-            <div class="text-3xl lg:text-4xl font-bold text-green-600 mb-2">7</div>
-            <div class="text-sm text-gray-600 dark:text-gray-400">Playlists Criadas</div>
-          </div>
-        </div>
       </section>
 
-      <!-- Artistas -->
-    <section class="mt-12 mb-12">
-        <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white">Artistas</h2>
-            <a href="#" class="text-purple-600 hover:text-purple-700 font-medium">Ver todos</a>
-        </div>
-        
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            <div class="flex flex-col items-center text-center">
-                <img src="" alt="Artista 1" class="w-32 h-32 rounded-full mb-3 shadow-lg hover:shadow-xl transition-all">
-                <h3 class="font-semibold text-gray-800 dark:text-white mb-1">Nome do Artista</h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400">1.2M seguidores</p>
-                <button class="mt-2 text-sm text-purple-600 border border-purple-600 px-4 py-1 rounded-full hover:bg-purple-600 hover:text-white transition-colors duration-200">
-                    Seguir
-                </button>
-            </div>
-            
-            <div class="flex flex-col items-center text-center">
-                <img src="" alt="Artista 2" class="w-32 h-32 rounded-full mb-3 shadow-lg hover:shadow-xl transition-all">
-                <h3 class="font-semibold text-gray-800 dark:text-white mb-1">Nome do Artista</h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400">980K seguidores</p>
-                <button class="mt-2 text-sm text-purple-600 border border-purple-600 px-4 py-1 rounded-full hover:bg-purple-600 hover:text-white transition-colors duration-200">
-                    Seguir
-                </button>
-            </div>
-            <div class="flex flex-col items-center text-center">
-                <img src="" alt="Artista 1" class="w-32 h-32 rounded-full mb-3 shadow-lg hover:shadow-xl transition-all">
-                <h3 class="font-semibold text-gray-800 dark:text-white mb-1">Nome do Artista</h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400">1.2M seguidores</p>
-                <button class="mt-2 text-sm text-purple-600 border border-purple-600 px-4 py-1 rounded-full hover:bg-purple-600 hover:text-white transition-colors duration-200">
-                    Seguir
-                </button>
-            </div>
-            
-            <div class="flex flex-col items-center text-center">
-                <img src="" alt="Artista 2" class="w-32 h-32 rounded-full mb-3 shadow-lg hover:shadow-xl transition-all">
-                <h3 class="font-semibold text-gray-800 dark:text-white mb-1">Nome do Artista</h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400">980K seguidores</p>
-                <button class="mt-2 text-sm text-purple-600 border border-purple-600 px-4 py-1 rounded-full hover:bg-purple-600 hover:text-white transition-colors duration-200">
-                    Seguir
-                </button>
-            </div>
-
-            </div>
-    </section>
-      <!-- Albuns -->
-        <section class="mb-12">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white">Álbuns em Alta</h2>
-                <a href="#" class="text-purple-600 hover:text-purple-700 font-medium">Ver todos</a>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <div class="flex flex-col items-start text-left">
-                    <img src="" alt="Capa do Álbum 1" class="w-full rounded-lg mb-3 shadow-lg hover:shadow-xl transition-all">
-                    <h3 class="font-semibold text-gray-800 dark:text-white truncate w-full">Nome do Álbum</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 truncate w-full">Artista</p>
-                </div>
-                
-                <div class="flex flex-col items-start text-left">
-                    <img src="" alt="Capa do Álbum 2" class="w-full rounded-lg mb-3 shadow-lg hover:shadow-xl transition-all">
-                    <h3 class="font-semibold text-gray-800 dark:text-white truncate w-full">Nome do Álbum</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 truncate w-full">Artista</p>
-                </div>
-                
-                </div>
-        </section>
-       <!-- Musicas -->
-        <section class="mb-12">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 dark:text-white">Álbuns em Alta</h2>
-                <a href="#" class="text-purple-600 hover:text-purple-700 font-medium">Ver todos</a>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <div class="flex flex-col items-start text-left">
-                    <img src="" alt="Capa do Álbum 1" class="w-full rounded-lg mb-3 shadow-lg hover:shadow-xl transition-all">
-                    <h3 class="font-semibold text-gray-800 dark:text-white truncate w-full">Nome do Álbum</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 truncate w-full">Artista</p>
-                </div>
-                
-                <div class="flex flex-col items-start text-left">
-                    <img src="" alt="Capa do Álbum 2" class="w-full rounded-lg mb-3 shadow-lg hover:shadow-xl transition-all">
-                    <h3 class="font-semibold text-gray-800 dark:text-white truncate w-full">Nome do Álbum</h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 truncate w-full">Artista</p>
-                </div>
-                
-                </div>
-        </section>
+      
     </main>
 
   </div>
 
-  <!-- Footer -->
-  <div id="footer"></div>
+  <!-- Footer (NÃO GOSTEI DO SITE COM FOOTER VOU DEIXAR DISPLAY NONE SE QUISER SÓ REMOVE O CLASS PRA VER O FOOTER) -->
+  <div id="footer" class="sem-footer"></div>
 
   <script src="src/js/index.js"></script>
 </body>
+
 </html>

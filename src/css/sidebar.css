@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+body {
+    overflow-x: hidden;
+}
+
 .music-bars {
     display: flex;
     align-items: end;
@@ -31,7 +35,6 @@
 }
 
 .lyrics-container {
-    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
     transition: padding 0.3s ease;
 }
 
@@ -58,14 +61,14 @@
 .sidebar {
     width: 320px;
     height: auto;
-    min-height: 80vh;
+    min-height: 40vh;
+    max-height: calc(100vh - 65px); 
     border-right: 1px solid #4a4a4a;
     overflow-y: auto;
     position: sticky;
     top: 65px;      
     z-index: 40;
 }
-
 .play-controls-mobile {
     display: none;
 }
@@ -83,8 +86,8 @@
     .sidebar {
         width: 100%;
         height: auto;
+        
         border-right: none;
-        padding-bottom: 80px; 
         position: relative;
         top: 0;
     }
@@ -92,6 +95,13 @@
     .desktop-controls {
         display: none;
     }
+
+    
+    .lyrics-container {
+        background-color: #111827;
+        transition: padding 0.3s ease;
+    }
+
     
     .play-controls-mobile {
         z-index: 999;
@@ -100,7 +110,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        border-top: 1px solid #1c1c1c;
+        border-top: 1px solid #3a3a3a;
         border-bottom: 1px solid #1c1c1c;
         padding: 12px 16px;
         align-items: center;
@@ -141,25 +151,7 @@
         display: flex;
         align-items: center;
     }
-    
-    @media (max-width: 768px) {
-    .lyrics-container {
-        max-height: 40vh;
-        overflow-y: auto;
-    }
-    }
-    .lyric-line {
-        padding: 10px 0;
-        min-height: 22px;
-    }
+
 }
 
-@media (min-width: 768px) {
-    .play-controls-mobile {
-        display: none;
-    }
-    
-    .desktop-controls {
-        display: block;
-    }
-}
+

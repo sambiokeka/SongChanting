@@ -30,20 +30,3 @@ function setInitialTheme() {
         htmlElement.classList.remove('dark');
     }
 }
-
-// Executa a função para definir o tema quando a página carrega
-setInitialTheme();
-
-// Adiciona um ouvinte de evento ao botão
-if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-        htmlElement.classList.toggle('dark');
-        
-        // Salva a preferência no localStorage
-        if (htmlElement.classList.contains('dark')) {
-            localStorage.setItem('color-theme', 'dark');
-        } else {
-            localStorage.setItem('color-theme', 'light');
-        }
-    });
-}

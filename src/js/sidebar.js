@@ -123,7 +123,7 @@ function updateProgressBar() {
     }
 }
 
-// Transforma os minutos em segundos
+// Transforma os segundos em minutos e segundos
 function formatTime(seconds) {
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
@@ -142,11 +142,7 @@ function updateCurrentLyric() {
     if (newIndex !== playerState.currentLyricIndex) {
         playerState.currentLyricIndex = newIndex;
         updateLyricsDisplay();
-
-       // ta dando problema no mobile então desativei
-        if (window.innerWidth > 768) {
-            scrollToActiveLyric();
-        }
+        scrollToActiveLyric(); // Removido o if para funcionar no mobile também
     }
 }
 
@@ -160,14 +156,27 @@ function updateLyricsDisplay() {
 }
 
 
-// Da scroll até a parte em destaque
+// Scrolla até a letra ativa
 function scrollToActiveLyric() {
     const activeLine = lyricLines[playerState.currentLyricIndex];
     if (!activeLine || !lyricsContainer) return;
 
+    const windowScrollY = window.scrollY;
+    const containerScrollTop = lyricsContainer.scrollTop;
+
     activeLine.scrollIntoView({
-        behavior: 'smooth',
+        behavior: 'auto',
         block: 'center'
+    });
+
+    const targetContainerScrollTop = lyricsContainer.scrollTop;
+
+    window.scrollTo(0, windowScrollY);
+    lyricsContainer.scrollTop = containerScrollTop;
+
+    lyricsContainer.scrollTo({
+        top: targetContainerScrollTop,
+        behavior: 'smooth'
     });
 }
 
@@ -187,7 +196,8 @@ function seekToLyric(index) {
 function adjustLyricsPadding() {
     if (!lyricsContainer) return;
     const containerHeight = lyricsContainer.clientHeight;
-    const padding = Math.max(containerHeight * 0.2, 40);
+    // O padding é 50% da altura do container, menos um pouco para a letra não ficar colada no topo/fundo
+    const padding = (containerHeight / 2) - 30; // 30px é um ajuste fino
     lyricsContainer.style.paddingTop = `${padding}px`;
     lyricsContainer.style.paddingBottom = `${padding}px`;
 }
