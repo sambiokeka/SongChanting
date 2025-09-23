@@ -32,29 +32,43 @@
 
 .lyrics-container {
     mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    transition: padding 0.3s ease;
 }
 
 .lyric-line {
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    padding: 12px 0;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .lyric-line.active {
     color: #ec4899;
     font-weight: 600;
     transform: scale(1.05);
+    background: linear-gradient(45deg, #ec4899, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .sidebar {
     width: 320px;
-    height: 100vh;
-    border-right: 1px solid #e5e7eb;
+    height: auto;
+    min-height: 80vh;
+    border-right: 1px solid #4a4a4a;
     overflow-y: auto;
+    position: sticky;
+    top: 65px;      
+    z-index: 40;
 }
 
 .play-controls-mobile {
     display: none;
 }
-
 
 .paused .music-bar {
     animation-play-state: paused;
@@ -69,10 +83,10 @@
     .sidebar {
         width: 100%;
         height: auto;
-        min-height: 100vh;
         border-right: none;
-        border-bottom: 1px solid #e5e7eb;
         padding-bottom: 80px; 
+        position: relative;
+        top: 0;
     }
     
     .desktop-controls {
@@ -80,13 +94,14 @@
     }
     
     .play-controls-mobile {
+        z-index: 999;
         display: flex;
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
-        background: white;
-        border-top: 1px solid #e5e7eb;
+        border-top: 1px solid #1c1c1c;
+        border-bottom: 1px solid #1c1c1c;
         padding: 12px 16px;
         align-items: center;
         justify-content: space-between;
@@ -127,12 +142,19 @@
         align-items: center;
     }
     
+    @media (max-width: 768px) {
     .lyrics-container {
         max-height: 40vh;
+        overflow-y: auto;
+    }
+    }
+    .lyric-line {
+        padding: 10px 0;
+        min-height: 22px;
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .play-controls-mobile {
         display: none;
     }

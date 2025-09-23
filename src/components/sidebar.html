@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SongChanting - Sidebar Responsiva</title>
-    
+    <!-- TailwindCSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/sidebar.css">
 </head>
@@ -46,21 +46,45 @@
             <div class="lyrics-container h-64 overflow-y-auto py-2 bg-gray-50 dark:bg-gray-800 rounded-lg px-4">
                 <div class="text-center text-gray-600 dark:text-gray-400 space-y-3 mt-4">
                     <p class="lyric-line active">Wait right here</p>
-                    <p class="lyric-line">I'll be back in the mornin'</p>
+                    <p class="lyric-line">I'll be back in the morning</p>
                     <p class="lyric-line">I know that I'm not that important to you</p>
-                    <p class="lyric-line">But to me, girl, you're so much more than gorgeous (Yeah)</p>
-                    <p class="lyric-line">So much more than perfect (Yeah)</p>
-                    <p class="lyric-line">Right now I know that I'm not really worth it</p>
-                    <p class="lyric-line">If you give me time, I could work on it</p>
+                    <p class="lyric-line">But to me, girl, you're so much more than gorgeous</p>
+                    <p class="lyric-line">So much more than perfect</p>
+                    <p class="lyric-line">Right now, I know that I'm not really worth it</p>
+                    <p class="lyric-line">If you give me time, I can work on it</p>
                     <p class="lyric-line">Give me some time while I work on it</p>
-                    <p class="lyric-line">Losin' your patience, and, girl, I don't blame you</p>
-                    <p class="lyric-line">The Earth's in rotation, you'rе waitin' for me (GothBoiClique)</p>
-                    <p class="lyric-line">Look at my face whеn I f*** on your waist</p>
+                    <p class="lyric-line">Losing your patience, and, girl, I don't blame you</p>
+                    <p class="lyric-line">The Earth's in rotation, you're waiting for me</p>
+                    <p class="lyric-line">Look at my face when I f*** on your waist</p>
                     <p class="lyric-line">'Cause we only have one conversation a week</p>
-                    <p class="lyric-line">That's why your friends always hatin' on me</p>
+                    <p class="lyric-line">That's why your friends always hating on me</p>
                     <p class="lyric-line">F*** 'em though, I did this all by myself</p>
-                    <p class="lyric-line">Matter fact, I ain't never asked no one for help</p>
-                    <p class="lyric-line">And that's why I don't pick up my phone when it rings</p>
+                    <p class="lyric-line">Matter of fact, I ain't never ask no one for help</p>
+                    <p class="lyric-line">And that's why I don't pick up my phone when it ring</p>
+                    <p class="lyric-line">None of my exes is over Lil Peep</p>
+                    <p class="lyric-line">Nobody flexing as much as I be</p>
+                    <p class="lyric-line">That's why she text me and tell me she loves me</p>
+                    <p class="lyric-line">She knows that someday I'll be over the sea</p>
+                    <p class="lyric-line">Making my money and smoking my weed</p>
+                    <p class="lyric-line">I think it's funny, she open up to me</p>
+                    <p class="lyric-line">Get comfortable with me, once I got it coming</p>
+                    <p class="lyric-line">I love her, she loves me</p>
+                    <p class="lyric-line">I know that I'm nothing</p>
+                    <p class="lyric-line">Like someone her family want me to be</p>
+                    <p class="lyric-line">If I find a way, would you walk with me?</p>
+                    <p class="lyric-line">Look at my face while you talking to me</p>
+                    <p class="lyric-line">'Cause we only have one conversation a week</p>
+                    <p class="lyric-line">Can I get one conversation at least?</p>
+                    <p class="lyric-line">Shout out to everyone making my beats</p>
+                    <p class="lyric-line">You helping me preach</p>
+                    <p class="lyric-line">This music is the only thing keeping the peace</p>
+                    <p class="lyric-line">When I'm falling to pieces</p>
+                    <p class="lyric-line">Look at the sky tonight</p>
+                    <p class="lyric-line">All of the stars have a reason</p>
+                    <p class="lyric-line">A reason to shine, a reason like mine</p>
+                    <p class="lyric-line">And I'm falling to pieces</p>
+                    <p class="lyric-line">Look at the sky tonight</p>
+                    <p class="lyric-line">All of the stars have a reason</p>
                 </div>
             </div>
         </div>
@@ -94,16 +118,15 @@
             <div class="mt-2">
                 <div class="relative pt-1">
                     <div class="overflow-hidden h-1 text-xs flex rounded bg-gray-200 dark:bg-gray-700">
-                        <div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500 w-[47%]"></div>
+                        <div id="progress-bar-fill" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500" style="width: 47%;"></div>
                     </div>
                 </div>
                 <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    <span>1:08</span>
-                    <span>2:23</span>
+                    <span id="current-time">1:08</span>
+                    <span id="total-duration">2:23</span>
                 </div>
             </div>
-        </div>
-        
+                    
         <!-- Playlists -->
         <div class="mt-8">
             <h3 class="font-semibold text-gray-800 dark:text-white mb-3">Suas playlists</h3>
