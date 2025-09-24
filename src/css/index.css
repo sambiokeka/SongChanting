@@ -4,6 +4,9 @@
     height: 8px;
 }
 
+.segundo {
+    color:#cb4fb9 !important;
+}
 
 
 @media (max-width: 768px) {

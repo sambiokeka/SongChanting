@@ -3,30 +3,268 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/css/footer.css">
-  <link rel="stylesheet" href="src/css/header.css">
-  <link rel="stylesheet" href="src/css/sidebar.css">
-  <title>SongChanting</title>
-
+  <title>SongChanting - Mais que ouvir, sentir</title>
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/LandingPage.css">
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 min-h-screen m-0 p-0">
-    <audio id="musica-principal" src="src/audio/starshopping.mp3"></audio>
-    <!-- Header -->
-    <div id="header"></div>
-
-    <div class="flex flex-col lg:flex-row">
-        <!-- Sidebar -->
-        <div id="sidebar"></div>
-     
-        <!-- Conteúdo Principal -->
-        <main class="flex-1 p-6 lg:p-8">
-
-        </main>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+ <div id="header"></div>
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-20 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">SongChanting, <span class="bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">Mais que ouvir, sentir</span></h1>
+          <p class="text-lg md:text-xl mb-8 opacity-90">Descubra músicas que falam com sua alma. Letras que tocam o coração.</p>
+          <button class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300 cursor-pointer">
+            Começar Agora
+          </button>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div class="relative w-full max-w-md">
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-purple-300 rounded-full opacity-30"></div>
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-pink-300 rounded-full opacity-30"></div>
+            <div class="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                   alt="SongChanting App Interface" class="rounded-xl w-full">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
+  <!-- Apresentação - Benefícios -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Por que escolher o SongChanting?</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Nossa plataforma foi desenvolvida para quem busca uma experiência musical mais profunda e significativa.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Benefício 1 -->
+        <div class="feature-card bg-white dark:bg-gray-800 rounded-xl p-6 text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+            <i class="fas fa-heart text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Músicas que tocam a alma</h3>
+          <p class="text-gray-600 dark:text-gray-400">Descubra letras que falam diretamente com suas emoções e experiências de vida.</p>
+        </div>
+        
+        <!-- Benefício 2 -->
+        <div class="feature-card bg-white dark:bg-gray-800 rounded-xl p-6 text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+            <i class="fas fa-music text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Letras sincronizadas</h3>
+          <p class="text-gray-600 dark:text-gray-400">Sinta cada palavra da música com nosso sistema de letras em tempo real.</p>
+        </div>
+        
+        <!-- Benefício 3 -->
+        <div class="feature-card bg-white dark:bg-gray-800 rounded-xl p-6 text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+            <i class="fas fa-users text-white text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Comunidade conectada</h3>
+          <p class="text-gray-600 dark:text-gray-400">Compartilhe suas descobertas musicais e conecte-se com pessoas que sentem a música como você.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer (NÃO GOSTEI DO SITE COM FOOTER VOU DEIXAR DISPLAY NONE SE QUISER SÓ REMOVE O CLASS PRA VER O FOOTER) -->
-    <div id="footer" class="sem-footer"></div>
+  <!-- Funcionalidades -->
+  <section class="py-16 px-4 bg-gray-100 dark:bg-gray-800">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Funcionalidades Incríveis</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Descubra tudo que o SongChanting tem a oferecer para transformar sua experiência musical.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="mb-8">
+            <div class="flex items-start mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+                <i class="fas fa-search text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Descobrimento Inteligente</h3>
+                <p class="text-gray-600 dark:text-gray-400">Encontre músicas baseadas no seu humor, momento e preferências musicais.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <div class="flex items-start mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+                <i class="fas fa-list text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Playlists Personalizadas</h3>
+                <p class="text-gray-600 dark:text-gray-400">Crie e compartilhe playlists que contam uma história ou representam um momento específico.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mb-8">
+            <div class="flex items-start mb-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+                <i class="fas fa-microphone text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Letras em Tempo Real</h3>
+                <p class="text-gray-600 dark:text-gray-400">Sincronização perfeita entre música e letra para uma imersão completa.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex justify-center">
+          <div class="relative w-full max-w-md">
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-purple-300 rounded-full opacity-30"></div>
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-pink-300 rounded-full opacity-30"></div>
+            <div class="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                   alt="SongChanting Features" class="rounded-xl w-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="py-16 px-4">
+    <div class="container mx-auto max-w-6xl ">
+      <div class="text-center mb-16 ">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">O que nossos usuários dizem</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Descubra como o SongChanting transformou a experiência musical de milhares de pessoas.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Depoimento 1 -->
+        <div class="testimonial-card rounded-xl p-6 ">
+          <div class="flex items-center mb-4">
+            <img src="https://imgs.search.brave.com/dUB0H6QJxyoRbOna4M9HZaZQk-88_Hz8JdB-yUDc7DU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS91bWEtbXVsaGVy/LWRlLW5lZ29jaW9z/LWVsZWdhbnRlLWUt/Y29uZmlhbnRlLWEt/c29ycmlyXzU4OTgx/Mi01MjkuanBnP3Nl/bXQ9YWlzX2luY29t/aW5nJnc9NzQwJnE9/ODA" 
+                 alt="Maria Silva" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold text-gray-800 dark:text-gray-500">Maria Silva</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Estudante de Música</p>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400 italic">"O SongChanting mudou completamente minha relação com a música. Agora consigo sentir cada palavra das minhas músicas favoritas de uma forma que nunca imaginei ser possível."</p>
+          <div class="flex text-yellow-400 mt-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        
+        <!-- Depoimento 2 -->
+        <div class="testimonial-card rounded-xl p-6">
+          <div class="flex items-center mb-4">
+            <img src="https://www.pellarin.com.br/wp-content/uploads/2022/08/artigoBannerMobile767x716_homem-com-papada-como-eliminar.jpg" 
+                 alt="João Santos" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold text-gray-800 dark:text-gray-500">João Santos</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Produtor Musical</p>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400 italic">"Como produtor, sempre busco plataformas que valorizem a experiência musical completa. O SongChanting faz isso de forma excepcional, integrando música e letra de maneira única."</p>
+          <div class="flex text-yellow-400 mt-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        
+        <!-- Depoimento 3 -->
+        <div class="testimonial-card rounded-xl p-6">
+          <div class="flex items-center mb-4">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                 alt="Ana Costa" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-bold text-gray-800 dark:text-gray-500">Ana Costa</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Fã de Música Underground</p>
+            </div>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400 italic">"Finalmente uma plataforma que entende o que é sentir a música! As recomendações são incríveis e descobri artistas que nunca teria encontrado de outra forma."</p>
+          <div class="flex text-yellow-400 mt-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulário de Contato -->
+  <section class="py-16 px-4 contact-form">
+    <div class="container mx-auto max-w-4xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Fique por dentro das novidades</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400">Cadastre-se para receber atualizações exclusivas e ser o primeiro a testar novos recursos.</p>
+      </div>
+      
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+        <form class="max-w-lg mx-auto">
+          <div class="mb-6">
+            <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Nome completo</label>
+            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white" placeholder="Seu nome">
+          </div>
+          
+          <div class="mb-6">
+            <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">E-mail</label>
+            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white" placeholder="seu@email.com">
+          </div>
+          
+          <div class="mb-6">
+            <label for="interests" class="block text-gray-700 dark:text-gray-300 mb-2">Quais gêneros musicais você mais gosta?</label>
+            <select id="interests" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-700 dark:text-white">
+              <option value="">Selecione seus gêneros favoritos</option>
+              <option value="rock">Rock</option>
+              <option value="pop">Pop</option>
+              <option value="hiphop">Hip Hop/Rap</option>
+              <option value="electronic">Eletrônica</option>
+              <option value="indie">Indie/Alternativo</option>
+              <option value="r&b">R&B/Soul</option>
+              <option value="other">Outros</option>
+            </select>
+          </div>
+          
+          <div class="mb-6">
+            <label class="flex items-center">
+              <input type="checkbox" class="rounded border-gray-300 text-purple-600 focus:ring-purple-500">
+              <span class="ml-2 text-gray-700 dark:text-gray-300">Desejo receber novidades e ofertas especiais por e-mail</span>
+            </label>
+          </div>
+          
+          <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
+            Quero ficar por dentro!
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script src="../js/landingPage.js"></script>
 
 </body>
+</html>

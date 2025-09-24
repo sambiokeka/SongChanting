@@ -156,6 +156,7 @@ function setupAudioControls() {
 
 async function initializeApp() {
     await Promise.all([
+        
         loadComponent("header", "src/components/header.html", "src/js/header.js"),
         loadComponent("sidebar", "src/components/sidebar.html", "src/js/sidebar.js"),
         loadComponent("footer", "src/components/footer.html")
