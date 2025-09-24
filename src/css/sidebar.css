@@ -73,10 +73,6 @@ body {
     display: none;
 }
 
-.paused .music-bar {
-    animation-play-state: paused;
-}
-
 .paused .music-bars span {
     display: none;
 }

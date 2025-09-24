@@ -6,11 +6,11 @@
     <title>SongChanting - Sidebar Responsiva</title>
     <!-- TailwindCSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/sidebar.css">
 </head>
 
 <body class="min-h-screen flex">
     <aside class="sidebar bg-white dark:bg-gray-900 p-4">
+       
         <!-- Barra de pesquisa -->
         <div class="relative mb-6">
             <input type="text" placeholder="Pesquisar música..." class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-purple-500 focus:border-transparent dark:bg-gray-800 dark:text-white">
@@ -46,6 +46,7 @@
             <div class="lyrics-container h-24 sm:h-64 overflow-y-auto py-2 bg-white dark:bg-gray-900 sm:bg-gray-50 sm:dark:bg-gray-800 rounded-lg px-4">
 
                 <div class="text-center text-gray-600 dark:text-gray-400 space-y-3 mt-4">
+                    <p class="lyric-line">( Musica )</p>
                     <p class="lyric-line">Wait right here</p>
                     <p class="lyric-line">I'll be back in the morning</p>
                     <p class="lyric-line">I know that I'm not that important to you</p>
@@ -86,6 +87,7 @@
                     <p class="lyric-line">And I'm falling to pieces</p>
                     <p class="lyric-line">Look at the sky tonight</p>
                     <p class="lyric-line">All of the stars have a reason</p>
+                    <p class="lyric-line">( Musica )</p>
                 </div>
             </div>
         </div>
@@ -117,9 +119,9 @@
             </div>
             <!-- Barra de progresso -->
             <div class="mt-2">
-                <div class="relative pt-1">
+                <div id="progress-bar-container" class="relative pt-1 cursor-pointer">
                     <div class="overflow-hidden h-1 text-xs flex rounded bg-gray-200 dark:bg-gray-700">
-                        <div id="progress-bar-fill" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500" style="width: 47%;"></div>
+                        <div id="progress-bar-fill" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-purple-500" style="width: 0%;"></div>
                     </div>
                 </div>
                 <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
