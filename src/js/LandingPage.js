@@ -16,7 +16,7 @@ async function loadComponent(id, file, jsFile = null) {
 // Função que carrega tudo que a Landing Page precisa
 async function initializelandingPage() {
     await Promise.all([
-        loadComponent("header", "../components/header.html", "src/js/header.js"),
+        loadComponent("header", "../components/header.html", "../js/header.js"),
         loadComponent("sidebar", "../components/sidebar.html", "src/js/sidebar.js"),
         loadComponent("footer", "../components/footer.html")
     ]);

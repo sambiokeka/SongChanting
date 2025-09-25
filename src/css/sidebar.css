@@ -60,15 +60,14 @@ body {
 
 .sidebar {
     width: 320px;
-    height: auto;
-    min-height: 40vh;
-    max-height: calc(100vh - 65px); 
+    height: calc(100vh - 65px); 
     border-right: 1px solid #4a4a4a;
-    overflow-y: auto;
+    overflow-y: auto; 
     position: sticky;
     top: 65px;      
     z-index: 40;
 }
+
 .play-controls-mobile {
     display: none;
 }

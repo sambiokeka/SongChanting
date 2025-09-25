@@ -17,6 +17,7 @@ function setupAudioControls() {
     // --- ELEMENTOS GLOBAIS DO PLAYER ---
     const audioPlayer = document.getElementById('musica-principal');
     const playBtnDesktop = document.getElementById('play-pause-btn-desktop');
+    const playBtnCTA = document.getElementById('play-pause-btn-CTA');
     const playBtnMobile = document.getElementById('play-pause-btn-mobile');
     const playIconDesktop = document.getElementById('play-icon-desktop');
     const pauseIconDesktop = document.getElementById('pause-icon-desktop');
@@ -37,6 +38,7 @@ function setupAudioControls() {
 
     // --- FUNÇÕES DE CONTROLE ---
     function alternarPlayPause() {
+        console.log('Clique no botão registrado')
         if (audioPlayer.paused) {
             audioPlayer.play();
         } else {
@@ -107,6 +109,7 @@ function setupAudioControls() {
 
     // --- EVENT LISTENERS ---
     playBtnDesktop?.addEventListener('click', alternarPlayPause);
+    playBtnCTA?.addEventListener('click', alternarPlayPause);
     playBtnMobile?.addEventListener('click', alternarPlayPause);
 
     audioPlayer.addEventListener('play', updatePlayPauseIcons);
