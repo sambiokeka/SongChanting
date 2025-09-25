@@ -6,6 +6,17 @@ SongChanting é uma aplicação web imersiva para amantes de música, projetada 
 
 ---
 
+## Equipe
+
+- Erick Jooji (RM: 564482)
+- Luiz Dalboni (RM: 564189)
+- Matheus Tozarelli (RM: 563490)
+- Rafael Lorenzini (RM: 563643)
+- Rafael Peloso (RM: 561343)
+
+---
+
+
 ## Funcionalidades
 
 - **Player de Áudio Funcional:** Controle total de play/pause e navegação pela música.
